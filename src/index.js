@@ -22,7 +22,7 @@ class Sorter {
 
   sort(indices) {
     let a = this.arr[indices[0]];
-    if(this.arr[indices[1]]>this.arr[indices[0]]){
+    if(this.arr[indices[1]]<this.arr[indices[0]]){
       this.arr[indices[0]]=this.arr[indices[1]];
       this.arr[indices[1]]=a;
     }
