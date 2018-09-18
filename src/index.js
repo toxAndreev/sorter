@@ -9,7 +9,7 @@ class Sorter {
   }
 
   at(index) {
-    // your implementation
+    return this.arr[index];
   }
 
   get length() {
