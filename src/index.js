@@ -1,24 +1,23 @@
 class Sorter {
-  constructor(arr=[]) {
-    this.arr=arr;
+  constructor() {
+    this.array = [];
     this.compareFunction = (a, b) => a - b;
   }
 
   add(element) {
-    
-  this.arr.push(element);
+	  this.array.push(element);
   }
 
   at(index) {
-    return this.arr[index];
+    return this.array[index];
   }
 
   get length() {
-    return this.arr.length;
+	  return this.array.length;
   }
 
   toArray() {
-    return this.arr;
+	  return this.array;
   }
 
   sort(indices) {
