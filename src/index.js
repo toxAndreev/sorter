@@ -21,7 +21,11 @@ class Sorter {
   }
 
   sort(indices) {
-    
+    let a = arr[indices[0]];
+    if(arr[indices[1]]>arr[indices[0]]){
+      arr[indices[0]]=arr[indices[1]];
+      arr[indices[1]]=a;
+    }
   }
 
   setComparator(compareFunction) {
