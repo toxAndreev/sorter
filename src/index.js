@@ -1,6 +1,7 @@
 class Sorter {
   constructor(arr=[]) {
     this.arr=arr;
+    this.compareFunction = (a, b) => a - b;
   }
 
   add(element) {
@@ -21,15 +22,14 @@ class Sorter {
   }
 
   sort(indices) {
-    let a = this.arr[indices[0]];
-    if(this.arr[indices[1]]<this.arr[indices[0]]){
-      this.arr[indices[0]]=this.arr[indices[1]];
-      this.arr[indices[1]]=a;
-    }
+    let subArr = indices.map(index => this.array[index]);
+    let sortedIndices = indices.sort();
+    subArr.sort(this.compareFunction);
+    sortedIndices.forEach((item, i) => {this.array[item] = subArr[i]});
   }
 
   setComparator(compareFunction) {
-    // your implementation
+    this.compareFunction = compareFunction;
   }
 }
 
